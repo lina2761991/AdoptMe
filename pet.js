@@ -1,4 +1,5 @@
 var arrayPet = [];
+var arrayAdoptedPet = [];
 
 function Pet(name, age, type, breed, microchipId, sterilized, pic){
 	var pet = {};
@@ -170,7 +171,7 @@ displayAll(arrayPet);
 
 
 
-                   
+                   var obj ;
 
                    $('span').on('click', function(e) {
                          	
@@ -217,7 +218,8 @@ displayAll(arrayPet);
 								 $('p').append('Microchip Id :'+' ' +microchipId + ' <br/> ');
 								 $('p').append('Sterilized :'+'  ' +sterilized + ' <br/> ');
 								
-
+								obj = arrayPet[i];
+                                 
 
 
 								
@@ -252,8 +254,22 @@ displayAll(arrayPet);
 
 						 
 						   $('#adopt').on('click', function() {
-						   
-						                     console.log(this);    	
+						                 	obj.status = "adopted";
+						                 	arrayAdoptedPet.push(obj);
+
+						                 	for(var i =0; i<arrayPet.length; i++){
+						                 		if(arrayPet[i] === obj){
+						                            arrayPet.splice(i, 1); 
+						                 		}
+						                 	}
+						                 	console.log(arrayPet);
+
+			
+						                      $('.modal').toggleClass('is-visible'); 
+
+						                      $('body').empty();
+
+						                      displayAll(arrayPet); 	
 				
 												 });
 

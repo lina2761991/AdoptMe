@@ -56,6 +56,8 @@ addPet(pet4);
 
 
 $(document).ready(function(){
+
+
  var $body = $('body');
 
   // display all the pets for adoption
@@ -145,15 +147,21 @@ displayAll(arrayPet);
 			        d6.appendTo(d5);
 
 			        var p =$('<p></p>')
-			        p.text('heyyyyyyy');
+			        
 			        p.appendTo(d6);
 
 
                      var button = $('<button></button>')
                      button.addClass('modal-toggle')
                      button.attr('id','cancel')
-                     button.text('Adopt Me !')
+                     button.text('Cancel !')
                      button.appendTo(d6);
+
+                     var button2 = $('<button></button>')
+                     //button2.addClass('modal-toggle')
+                     button2.attr('id','adopt')
+                     button2.text('adopt me !')
+                     button2.appendTo(d6);
 					
 					
 					d1.appendTo($('body'));
@@ -162,17 +170,16 @@ displayAll(arrayPet);
 
 
 
-                     function clickOnSeeMore(){
+                   
 
                    $('span').on('click', function(e) {
                          	
 
                            e.preventDefault();
                            $('.modal').toggleClass('is-visible');
-                           var n = this.name;
-                           $('p').text(name);
+                           $('p').empty();
 
-
+                           
 
 
                           var arrSrc=$(this)[0].innerText.split('');
@@ -188,15 +195,66 @@ displayAll(arrayPet);
 						console.log(imageName);
 
 
+                             //var name ='';
+
+						for(var i =0; i<arrayPet.length; i++){
+
+							if(imageName === arrayPet[i].pic.split('/')[1] ){
+
+
+								var  name =  arrayPet[i].name;
+								var  age =  arrayPet[i].age;
+								var  type =  arrayPet[i].type;
+								var  breed =  arrayPet[i].breed;
+								var  microchipId =  arrayPet[i].microchipId;
+								var  sterilized =  arrayPet[i].sterilized;
+
+								// console.log( arrayPet[i].pic);
+								 $('p').append('Name :'+'          ' +name + ' <br/> ');
+								 $('p').append('Age :'+'          ' +age + ' <br/> ');
+								 $('p').append('Type :'+'         ' +type + ' <br/> ');
+								 $('p').append('Breed :'+'        ' +breed + ' <br/> ');
+								 $('p').append('Microchip Id :'+' ' +microchipId + ' <br/> ');
+								 $('p').append('Sterilized :'+'  ' +sterilized + ' <br/> ');
+								
+
+
+
+								
+
+							}
+
+
+
+
+
+							  
+
+
+						}
+
+						
+                         
+
 				
                              });
 
-               }
-               clickOnSeeMore();
+               
+
+           
+
+
 
 						 $('#cancel').on('click', function(e) {
 						                         	
 						   $('.modal').toggleClass('is-visible');
+												 });
+
+						 
+						   $('#adopt').on('click', function() {
+						   
+						                     console.log(this);    	
+				
 												 });
 
 

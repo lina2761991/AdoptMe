@@ -507,49 +507,7 @@ function displayAdopted(){
 
                             $('#Add').on('click',function(){
                             	$('main').empty();
-         //                    	 var bigdiv = $('<div></div>');
-			                     
-
-
-								 // var form =$('<form></form>');
-								 // var name =$('<input>'+ '<br/><br/><br/>');
-								 // var age =$('<input>'+ '<br/><br/><br/>');
-								 // var type =$('<input>'+ '<br/><br/><br/>');
-								 // var breed =$('<input>'+ '<br/><br/><br/>');
-								 // var microchipId =$('<input>'+ '<br/><br/><br/>');
-								 // var sterilized =$('<input>'+ '<br/><br/><br/>');
-								 // var pic =$('<input>'+ '<br/><br/><br/>');
-
-								 // form.append('Name: ').append('       ');
-								 // form.append(name );
-
-								 // form.append('Age: ');
-								 // age.appendTo(form);
-
-								 // form.append('Type: ');
-								 // type.appendTo(form);
-
-         //                         form.append('Breed: ');
-								 // breed.appendTo(form);
-
-
-         //                         form.append('Microchip Id: ');
-								 // microchipId.appendTo(form);
-
-
-         //                         form.append('Sterilized: ');
-								 // sterilized.appendTo(form);
-
-								 // form.append('Picture: ');
-								 // pic.appendTo(form);
-
-								 // form.appendTo(bigdiv);
-
-								 // var button =$('<button>Add</button>')
-
-								 // button.appendTo(bigdiv);
-
-								 // bigdiv.appendTo('main')
+        
 
 
 
@@ -605,68 +563,63 @@ function displayAdopted(){
 								  var type = $('<select>');
 								  type.attr('id','typeId');
 
-								  var option1 = $('<option>Dog</option>')
-								  option1.attr('value','Dog');
+								  var optionType = $('<option> -- select one -- </option>')
+								  //optionType.append(type);
+                                  var item1 = $('<option>Dog</option>')
+								  item1.attr('value','Dog');
 
-								  var option2 = $('<option>Cat</option>')
-								  option2.attr('value','Cat');
-
-								  option1.appendTo(type);
-								  option2.appendTo(type);
-
-
-                                    //console.log(type.val())
-
-            //                         $('type').on('change', function() {
-												//   //alert( this.value );
-												//   console.log('hey')
-												// });
+								  var item2 = $('<option>Cat</option>')
+								  item2.attr('value','Cat');
 
 
+								  
 
-
-            //                         $( "select" )
-										  // .change(function () {
-										  //   var str = "";
-										  //   $( "select option:selected" ).each(function() {
-										  //     str = $( this ).text() + " ";
- 
-										  //   });
-										  //   $( "main" ).text( str );
-										  // })
-										  // .change();
-
-
-								
-
+								  optionType.appendTo(type);
+								  item1.appendTo(type);
+								  item2.appendTo(type);
 								 
+ 
                                
-                                console.log(type.val())
+                              //  console.log(type.val())
 
+                                var size =$('<select>');
+								var option3 = $('<option>-- select one -- </option>')
 
-
-                                var breed =$('<select>');
-								var option3 = $('<option></option>')
-
-								  // if(type.val() === 'Cat'){
-
-								  // 	option3.text('german')
-								  // 	option3.attr('value','german');
-								  // }
-
-
-								  	option3.text('german')
+								  //	option3.text('german')
 								  	//option3.attr('value','german');
 
 					
-								  option3.appendTo(breed);
+								  option3.appendTo(size);
 
 
 								  type.attr('id','typeId');
-								   breed.attr('id','typeId1'); 
+								   size.attr('id','typeId1'); 
  
 								  var microchipId =$('<input>');
-								  var sterilized =$('<input>');
+
+								   var sterilized =$('<input>');
+								   sterilized.attr('type','radio');
+								   sterilized.attr('name','saymyname');
+								   sterilized.attr('value','yes');
+								 //  <label for="test1">option 1</label>
+
+								 var label =('<label>yes</label>')
+								// label.attr('for','yes');
+
+								 //label.appendTo(sterilized);
+								  // sterilized.append('yes')
+								 // <label for="checkbox1">blue</label>
+
+								  var sterilized2 =$('<input>');
+								  sterilized2.attr('type','radio');
+								  sterilized2.attr('name','saymyname');
+								  sterilized2.attr('value','no');
+								  var label2 =('<label>no</label>');
+
+
+								  
+
+
 								 var pic =$('<input>');
 
 								 th1.append('Name: ');
@@ -679,13 +632,16 @@ function displayAdopted(){
 								 th42.append(type );
 
 								  th51.append('Breed: ');
-								 th52.append(breed );
+								 th52.append(size );
 
 								 th61.append('MicrochipId: ');
 								 th62.append(microchipId );
 
 								 th71.append('Sterilized: ');
 								 th72.append(sterilized );
+								 th72.append(label);
+								 th72.append(sterilized2 );
+								  th72.append(label2);
 
 								 th81.append('Picture: ');
 								 th82.append(pic );
@@ -730,66 +686,37 @@ function displayAdopted(){
 								
 								 form.append(bigdiv);
 
-								 // form.append('Age: ');
-								 // age.appendTo(form);
-
-								 // form.append('Type: ');
-								 // type.appendTo(form);
-
-         //                         form.append('Breed: ');
-								 // breed.appendTo(form);
-
-
-         //                         form.append('Microchip Id: ');
-								 // microchipId.appendTo(form);
-
-
-         //                         form.append('Sterilized: ');
-								 // sterilized.appendTo(form);
-
-								 // form.append('Picture: ');
-								 // pic.appendTo(form);
-
-								 //form.appendTo(bigdiv);
-
-								 var button =$('<button>Add</button>')
+			
+								 var button =$('<button>Add New Pet</button>')
+								 button.attr('id','addNewPet');
 
 								 button.appendTo(bigdiv);
 
-								 bigdiv.appendTo('main')
+								 bigdiv.appendTo('main');
+
+
+				  $("#typeId").change(function() {
+				        var val = $(this).val();
+				       // console.log(val)
+				        if (val === "Dog") {
+				           size.html("<option value='German Sheperd'>German Sheperd</option><option value='Dashhund'>Dashhund</option>");
+
+				          // size.text('hey')
+				          console.log('hey')
+				        } 
+
+				         else if (val == "Cat") {
+				             size.html("<option value='test'>Siamois</option><option value='test2'>Persan</option>");
+
+				         }
+				    });
+
+
+				  //addNewPet
 
 
 
-//                                     $('#typeId').change(function() {
-//                                     		//option3.text('persian');
-//                                     		//$("breed").append(new Option("option text", "value"));
-//                                     		var o = new Option("option text", "value");
-// 											/// jquerify the DOM object 'o' so we can use the html method
-// 											$(o).html("option text");
-// 											$("breed").append(o);
-
-  
-// })
-								
-							    $("#typeId").change(function () {
-							        var val = $(this).val();
-							        if (val == "Dog") {
-							            $("#size").html("<option value='test'>item1: test 1</option><option value='test2'>item1: test 2</option>");
-							        } else if (val == "Cat") {
-							            $("#size").html("<option value='test'>item2: test 1</option><option value='test2'>item2: test 2</option>");
-							        } 
-							        // else if (val == "item3") {
-							        //     $("#size").html("<option value='test'>item3: test 1</option><option value='test2'>item3: test 2</option>");
-							        // } else if (val == "item0") {
-							        //     $("#size").html("<option value=''>--select one--</option>");
-							        // }
-							    });
-
-
-
-
-
-                            }) 
+}) 
 
                             
                          

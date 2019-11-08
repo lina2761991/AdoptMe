@@ -24,7 +24,7 @@ function Pet(name, age, type, breed, microchipId, sterilized, pic){
 	return pet;
 }
 
-// function CreatePet(name, age, type, breed, microchiped, sterilized, status, pic){
+// function CreatePet(name, age, type, breed, microchiped, sterilized, pic, status,){
 // 	this.name = name;
 // 	this.age = age;
 // 	this.type = type;
@@ -712,7 +712,34 @@ function displayAdopted(){
 				    });
 
 
-				  //addNewPet
+				
+				  $('#addNewPet').on('click',function(){
+				  	//console.log('hey')
+
+				  	var newName = name.val();
+
+				  	var newAge =  age.val();
+				  	var newType = type.val();
+				  	var newBreed = size.val();
+				  	var newMicrochipId = microchipId.val();
+				  	var newSterilized = sterilized.val()
+				  	var newPic = pic.val();
+				  	
+				  	
+
+                     var a = Pet(newName, newAge, newType, newBreed, newMicrochipId, newSterilized, newPic);
+                     console.log(a);
+                     arrayPet.push(a);
+                     arrayPetForAdoption.push(a);
+                      $('main').empty();
+						displayAll(arrayPetForAdoption);
+
+
+
+				  })
+
+
+				  
 
 
 

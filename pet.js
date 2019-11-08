@@ -149,6 +149,7 @@ function displayAll(arr){
                     var d4 = $('<div></div>');
 			        d4.addClass('modal-header');
 			        var h=$('<h2></h2>');
+			        h.attr('id','h');
 			        h.text('Those are my Info');
 
 			        h.appendTo(d4);

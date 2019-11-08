@@ -4,6 +4,7 @@
 .ClassSpan{
    margin: 14px;
   display: inline-block;
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 .pic{
@@ -26,7 +27,8 @@
 }
 
 button{
-margin-left:105px;
+margin-left:75px;
+margin-bottom: 20px;
 }
 
 
@@ -261,4 +263,8 @@ h6 {
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
+}
+
+#h{
+  padding-left: 150px;
 }

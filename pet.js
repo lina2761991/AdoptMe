@@ -19,9 +19,9 @@ function Pet(name, age, type, breed, microchipId, sterilized, pic){
 
 
 var pet1 = Pet('zmorda', 7, 'dog', 'dashhund', '03145', 'sterilized', 'pics/2.jpg');
-var pet2 = Pet('Clara', 3, 'dog', 'dashhund', '03145', 'sterilized', 'pics/1.jpg');
-var pet3 = Pet('Beauty', 2, 'dog', 'dashhund', '03145', 'sterilized', 'pics/7.jpg');
-var pet4 = Pet('Rex', 3, 'dog', 'dashhund', '03145', 'sterilized', 'pics/3.jpg');
+var pet2 = Pet('Clara', 3, 'dog', 'dashhund', '03145', 'sterilized', 'pics/9.jpg');
+var pet3 = Pet('Beauty', 2, 'dog', 'dashhund', '03145', 'sterilized', 'pics/a.jpg');
+var pet4 = Pet('Rex', 3, 'dog', 'dashhund', '03145', 'sterilized', 'pics/z.jpg');
 
 
 //arrayPet.push(pet1, pet2, pet3, pet4);
@@ -65,7 +65,7 @@ function displayAll(arr){
 					 var s4 = $('<div></div>');
 					
 					var button = $('<button></button>');
-					button.text(' Get to know me more ! ');
+					button.text(' Get To Know Me More ! ');
                     console.log(arr[i])
                     var pic = arr[i].pic;
                      s1.attr('src',pic);
@@ -103,7 +103,7 @@ function displayAdopted(){
 					 var s4 = $('<div></div>');
 					
 					var button = $('<button></button>');
-					button.text(' Delete!');
+					button.text(' Delete');
 					button.add('id','DeleteButton');
                     console.log(arrayAdoptedPet[i])
                      var pic = arrayAdoptedPet[i].pic;
@@ -148,7 +148,7 @@ function displayAdopted(){
 			        d4.addClass('modal-header');
 			        var h=$('<h2></h2>');
 			        h.attr('id','h');
-			        h.text('Those are my Info');
+			        h.text('Those are My Info');
 
 			        h.appendTo(d4);
 			        d4.appendTo(d3);
@@ -169,13 +169,13 @@ function displayAdopted(){
                      var button = $('<button></button>')
                      button.addClass('modal-toggle')
                      button.attr('id','cancel')
-                     button.text('Cancel !')
+                     button.text('Cancel')
                      button.appendTo(d6);
 
                      var button2 = $('<button></button>')
                      //button2.addClass('modal-toggle')
                      button2.attr('id','adopt')
-                     button2.text('adopt me !')
+                     button2.text('Adopt Me Please !')
                      button2.appendTo(d6);
 					
 					

@@ -103,7 +103,7 @@ function displayAdopted(){
 					 var s4 = $('<div></div>');
 					
 					var button = $('<button></button>');
-					button.text(' Delete');
+					button.text(' Delete!');
 					button.add('id','DeleteButton');
                     console.log(arrayAdoptedPet[i])
                      var pic = arrayAdoptedPet[i].pic;
@@ -398,7 +398,7 @@ function displayAdopted(){
 								 var th72 =$('<th></th>');
 
 								 var tr8 =$('<tr></tr>');
-								 var th81  =$('<th></th>');
+								 var th81 = $('<th></th>');
 								 var th82 =$('<th></th>');
 
 

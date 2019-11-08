@@ -55,9 +55,11 @@ function displayAll(arr){
 
                      var s = $('<span></span>');
                      s.addClass('ClassSpan') ;
+                     //s.attr('id','standOut')
                      s.addClass('modal-toggle');
 					 s.attr('id', 'big');
 					 var s1 = $('<img>');
+					 s1.add('attr','imageId')
 					 var s2 = $('<div></div>');
 					 var s3 = $('<div></div>');
 					 var s4 = $('<div></div>');

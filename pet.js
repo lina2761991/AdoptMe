@@ -14,33 +14,8 @@ function Pet(name, age, type, breed, microchipId, sterilized, pic){
 	pet.pic = pic;
 	pet.status = 'For Adoption';
 
-	//pet.addPet = addPet;
-	//pet.displayPet = displayPet;
-	//pet.adoptPet = adoptPet;
-	//pet.removePet = removePet;
-	//pet.searchPet = searchPet;
-
-
 	return pet;
 }
-
-// function CreatePet(name, age, type, breed, microchiped, sterilized, pic, status,){
-// 	this.name = name;
-// 	this.age = age;
-// 	this.type = type;
-// 	this.breed = breed;
-// 	this.microchiped = microchiped;
-// 	this.sterilized = sterilized;
-// 	this.status = status;
-// 	this.pic = pic
-
-// }
-
-
-// function addPet(pet){
-// 	arrayPet.push(pet);
-// }
-
 
 
 var pet1 = Pet('zmorda', 7, 'dog', 'dashhund', '03145', 'sterilized', 'pics/2.jpg');
@@ -51,12 +26,6 @@ var pet4 = Pet('Rex', 3, 'dog', 'dashhund', '03145', 'sterilized', 'pics/7.jpg')
 
 arrayPet.push(pet1, pet2, pet3, pet4);
 arrayPetForAdoption.push(pet1, pet2, pet3, pet4);
-
-// addPet(pet1);
-// addPet(pet2);
-// addPet(pet3);
-// addPet(pet4);
-
 
 
 
@@ -77,9 +46,6 @@ function closeNav() {
 
 $(document).ready(function(){
 	var $main = $('main');
-
-					 
- 
 
   // display all the pets 
 
@@ -152,18 +118,9 @@ function displayAdopted(){
 					s4.appendTo(s);
 					s.appendTo($('main'));
 
-
   }
 
 }
-
-
-
-
-
-// <a class="button" href="#popup1">Let me Pop up</a>
-
-
 
                     displayAll(arrayPet);
 
@@ -228,9 +185,9 @@ function displayAdopted(){
 
                    var obj ;
 
-                  // $('.ClassSpan').on('click', function(e) { working fiiiiine 
+                   $('.ClassSpan').on('click', function(e) { //working fiiiiine 
 
-                  	$('body').on('click','.ClassSpan', function(e) {
+                  //	$('body').on('click','.ClassSpan', function(e) {
 
                            e.preventDefault();
                            $('.modal').toggleClass('is-visible');
@@ -262,7 +219,7 @@ function displayAdopted(){
 								 $('p').append('Breed :'+'        ' +breed + ' <br/> ');
 								 $('p').append('Microchip Id :'+' ' +microchipId + ' <br/> ');
 								 $('p').append('Sterilized :'+'  ' +sterilized + ' <br/> ');		
-								obj = arrayPet[i];			
+								  obj = arrayPet[i];			
 								// console.log( obj.name);
 
 							}
@@ -435,72 +392,12 @@ function displayAdopted(){
                             $('#homPage').on('click', function() {
 
                              $('main').empty();
-						   	  displayAll(arrayPetForAdoption);
+						   	 displayAll(arrayPetForAdoption);
+						   	 console.log('hey')
+
+						   	 });
 
 
-						   	  	$('body').on('click','.ClassSpan', function(e) {
-
-                          // e.preventDefault();
-                           $('.modal').toggleClass('is-visible');
-                           $('p').empty();
-
-                          var arrSrc = $(this)[0].innerText.split('');
-                          
-                           var imageNameLetters = arrSrc.slice(arrSrc.length - 33, arrSrc.length-22 );// get the src of the image as an array of letters 
-						 
-						 var imageFullName = imageNameLetters.join('');// get the src of the image as a string
-                         //console.log(imageFullName);
-						var imageNameArray = imageFullName.split('/');
-						
-						var imageName = imageNameArray[imageNameArray.length-1];			
-
-						for(var i =0; i<arrayPetForAdoption.length; i++){
-
-							if(imageName === arrayPetForAdoption[i].pic.split('/')[1] ){
-
-								var  name =  arrayPetForAdoption[i].name;
-								var  age =  arrayPetForAdoption[i].age;
-								var  type =  arrayPetForAdoption[i].type;
-								var  breed =  arrayPetForAdoption[i].breed;
-								var  microchipId =  arrayPetForAdoption[i].microchipId;
-								var  sterilized =  arrayPetForAdoption[i].sterilized;	
-								 $('p').append('Name :'+'          ' +name + ' <br/> ');
-								 $('p').append('Age :'+'          ' +age + ' <br/> ');
-								 $('p').append('Type :'+'         ' +type + ' <br/> ');
-								 $('p').append('Breed :'+'        ' +breed + ' <br/> ');
-								 $('p').append('Microchip Id :'+' ' +microchipId + ' <br/> ');
-								 $('p').append('Sterilized :'+'  ' +sterilized + ' <br/> ');		
-								obj = arrayPetForAdoption[i];			
-								 console.log( obj.name);
-
-							}
-						}	
-                     });
-
-
- 					$('#cancel').on('click', function(e) {
-						                         	
-						   $('.modal').toggleClass('is-visible');
-												 });
-// adopt me button 
-						
-						   $('#adopt').on('click', function() {
-
-						                 	obj.status = "adopted";
-						                 	arrayAdoptedPet.push(obj);
-
-						                 	for(var i =0; i<arrayPetForAdoption.length; i++){
-						                 		if(arrayPetForAdoption[i] === obj){
-						                            arrayPetForAdoption.splice(i, 1); 
-						                            arrayPet.splice(i,1) ;
-						                 		}
-						                 	}
-						                      $('.modal').toggleClass('is-visible'); 
-
-												 });
-						   
-
-						   });
 
                             // display for adoption
 

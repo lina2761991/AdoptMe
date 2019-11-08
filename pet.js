@@ -1,5 +1,5 @@
 
-var arrayPet = [];
+//var arrayPet = [];
 var arrayAdoptedPet = [];
 var arrayPetForAdoption = [];
 
@@ -19,12 +19,12 @@ function Pet(name, age, type, breed, microchipId, sterilized, pic){
 
 
 var pet1 = Pet('zmorda', 7, 'dog', 'dashhund', '03145', 'sterilized', 'pics/2.jpg');
-var pet2 = Pet('Clara', 3, 'dog', 'dashhund', '03145', 'sterilized', 'pics/5.jpeg');
-var pet3 = Pet('Beauty', 2, 'dog', 'dashhund', '03145', 'sterilized', 'pics/9.jpg');
-var pet4 = Pet('Rex', 3, 'dog', 'dashhund', '03145', 'sterilized', 'pics/7.jpg');
+var pet2 = Pet('Clara', 3, 'dog', 'dashhund', '03145', 'sterilized', 'pics/1.jpg');
+var pet3 = Pet('Beauty', 2, 'dog', 'dashhund', '03145', 'sterilized', 'pics/7.jpg');
+var pet4 = Pet('Rex', 3, 'dog', 'dashhund', '03145', 'sterilized', 'pics/3.jpg');
 
 
-arrayPet.push(pet1, pet2, pet3, pet4);
+//arrayPet.push(pet1, pet2, pet3, pet4);
 arrayPetForAdoption.push(pet1, pet2, pet3, pet4);
 
 
@@ -122,7 +122,7 @@ function displayAdopted(){
 
 }
 
-                    displayAll(arrayPet);
+                    displayAll(arrayPetForAdoption);
 
 
 
@@ -203,23 +203,23 @@ function displayAdopted(){
 						
 						var imageName = imageNameArray[imageNameArray.length-1];			
 
-						for(var i =0; i<arrayPet.length; i++){
+						for(var i =0; i<arrayPetForAdoption.length; i++){
 
-							if(imageName === arrayPet[i].pic.split('/')[1] ){
+							if(imageName === arrayPetForAdoption[i].pic.split('/')[1] ){
 
-								var  name =  arrayPet[i].name;
-								var  age =  arrayPet[i].age;
-								var  type =  arrayPet[i].type;
-								var  breed =  arrayPet[i].breed;
-								var  microchipId =  arrayPet[i].microchipId;
-								var  sterilized =  arrayPet[i].sterilized;	
+								var  name =  arrayPetForAdoption[i].name;
+								var  age =  arrayPetForAdoption[i].age;
+								var  type =  arrayPetForAdoption[i].type;
+								var  breed =  arrayPetForAdoption[i].breed;
+								var  microchipId =  arrayPetForAdoption[i].microchipId;
+								var  sterilized =  arrayPetForAdoption[i].sterilized;	
 								 $('p').append('Name :'+'          ' +name + ' <br/> ');
 								 $('p').append('Age :'+'          ' +age + ' <br/> ');
 								 $('p').append('Type :'+'         ' +type + ' <br/> ');
 								 $('p').append('Breed :'+'        ' +breed + ' <br/> ');
 								 $('p').append('Microchip Id :'+' ' +microchipId + ' <br/> ');
 								 $('p').append('Sterilized :'+'  ' +sterilized + ' <br/> ');		
-								  obj = arrayPet[i];			
+								  obj = arrayPetForAdoption[i];			
 								// console.log( obj.name);
 
 							}
@@ -249,51 +249,54 @@ function displayAdopted(){
 						                 	for(var i =0; i<arrayPetForAdoption.length; i++){
 						                 		if(arrayPetForAdoption[i] === obj){
 						                            arrayPetForAdoption.splice(i, 1); 
-						                            arrayPet.splice(i,1) ;
+						                            //arrayPet.splice(i,1) ;
 						                 		}
 						                 	}
+
+						                 	$('main').empty('');
+						                        displayAll(arrayPetForAdoption);
 						                      $('.modal').toggleClass('is-visible'); 
 
 												 });
 
 
-						   function displayForAdoption(){
-						   	//console.log('hey')
+// 						   function displayForAdoption(){
+// 						   	//console.log('hey')
 
-	                 for(var i =0; i<arrayPetForAdoption.length; i++){
-	                 	if(arrayPetForAdoption[i].status === 'For Adoption'){
+// 	                 for(var i =0; i<arrayPetForAdoption.length; i++){
+// 	                 	if(arrayPetForAdoption[i].status === 'For Adoption'){
 
-                     var s = $('<span></span>');
-                     s.addClass('ClassSpan') ;
-                     s.addClass('modal-toggle');
-					 s.attr('id', 'big');
-					 var s1 = $('<img>');
-					 var s2 = $('<div></div>');
-					 var s3 = $('<div></div>');
-					 var s4 = $('<div></div>');
+//                      var s = $('<span></span>');
+//                      s.addClass('ClassSpan') ;
+//                      s.addClass('modal-toggle');
+// 					 s.attr('id', 'big');
+// 					 var s1 = $('<img>');
+// 					 var s2 = $('<div></div>');
+// 					 var s3 = $('<div></div>');
+// 					 var s4 = $('<div></div>');
 					
-					var button = $('<button></button>');
-					button.text(' Get to know me more ! ');
-                    console.log(arrayPetForAdoption[i])
-                     var pic = arrayPetForAdoption[i].pic;
-                     s1.attr('src',pic);
-                     s1.attr('class', 'pic');    
-					 s2.append("<br/>" +arrayPetForAdoption[i].pic);
-					 s2.attr('class', 'text');  
+// 					var button = $('<button></button>');
+// 					button.text(' Get to know me more ! ');
+//                     console.log(arrayPetForAdoption[i])
+//                      var pic = arrayPetForAdoption[i].pic;
+//                      s1.attr('src',pic);
+//                      s1.attr('class', 'pic');    
+// 					 s2.append("<br/>" +arrayPetForAdoption[i].pic);
+// 					 s2.attr('class', 'text');  
 					
-					button.appendTo(s4);
+// 					button.appendTo(s4);
 
-				    s1.appendTo(s);
-					s2.appendTo(s);
-					s3.appendTo(s);	
-					s4.appendTo(s);
-					s.appendTo($('main'));
+// 				    s1.appendTo(s);
+// 					s2.appendTo(s);
+// 					s3.appendTo(s);	
+// 					s4.appendTo(s);
+// 					s.appendTo($('main'));
 
 
-  }
-}
+//   }
+// }
 
-}
+// }
 
 
 // display adopted pets 
@@ -332,59 +335,7 @@ function displayAdopted(){
 
 
 
-						   $('#Adopted').on('click', function() {
-						   	  $('main').empty('');
-						     	displayAdopted();
-
-
-						   	 //console.log(arrayAdoptedPet)
-
-                            $('body').on('click','.ClassSpan','#DeleteButton', function(e) {
-//console.log($(this))
-                            	//  console.log($(this)[0].innerText.split(''));
-						   	 var arrSrc=$(this)[0].innerText.split('');
-                          
-                           var imageNameLetters = arrSrc.slice(arrSrc.length - 33, arrSrc.length-27 );// get the src of the image as an array of letters 
-						// console.log(imageFullName);
-						 var imageFullName = imageNameLetters.join('');// get the src of the image as a string
-
-
-                        // console.log(imageFullName);
-						var imageNameArray = imageFullName.split('/');
-						//console.log(imageNameArray);
-						var imageName = imageNameArray[imageNameArray.length-1];
-						//console.log(imageName)
-
 						
-
-						for(var i =0; i<arrayAdoptedPet.length; i++){
-
-
-							if(imageName === arrayAdoptedPet[i].pic.split('/')[1] ){
-
-		                         //console.log(arrayPet[i].pic.split('/')[1])
- //console.log(imageName)
-
-                           
-
-								arrayAdoptedPet.splice(i, 1);
-								arrayPet.splice(i,1) ;
-								console.log(arrayAdoptedPet)
-
-								$('main').empty('');
-								
-								displayAdopted();
-								// console.log( obj.name);
-
-							}
-						}	
-
-						   
-
-						   });
-
-                               });
-
 
 
 						   //display homepage
@@ -592,6 +543,8 @@ function displayAdopted(){
 								 bigdiv.appendTo('main');
 
 
+
+
 				  $("#typeId").change(function() {
 				        var val = $(this).val();
 				       // console.log(val)
@@ -626,9 +579,11 @@ function displayAdopted(){
 
                      var a = Pet(newName, newAge, newType, newBreed, newMicrochipId, newSterilized, newPic);
                      console.log(a);
-                     arrayPet.push(a);
+                    // arrayPet.push(a);
                      arrayPetForAdoption.push(a);
                       $('main').empty();
+
+
 						displayAll(arrayPetForAdoption);
 
 
@@ -636,11 +591,72 @@ function displayAdopted(){
 				  })
 
 
+
+ }) 
+
+
+
+
+   $('#Adopted').on('click', function() {
+
+						   	  $('main').empty('');
+						     	displayAdopted();
+
+
+						   	 //console.log(arrayAdoptedPet)
+
+                            $('body').on('click','.ClassSpan','#DeleteButton', function(e) {
+//console.log($(this))
+                            	//  console.log($(this)[0].innerText.split(''));
+						   	 var arrSrc=$(this)[0].innerText.split('');
+                          
+                           var imageNameLetters = arrSrc.slice(arrSrc.length - 33, arrSrc.length-27 );// get the src of the image as an array of letters 
+						// console.log(imageFullName);
+						 var imageFullName = imageNameLetters.join('');// get the src of the image as a string
+
+
+                        // console.log(imageFullName);
+						var imageNameArray = imageFullName.split('/');
+						//console.log(imageNameArray);
+						var imageName = imageNameArray[imageNameArray.length-1];
+						//console.log(imageName)
+
+						
+
+						for(var i =0; i<arrayAdoptedPet.length; i++){
+							console.log('arry i pics '+ arrayAdoptedPet[i].pic.split('/')[1])
+
+
+							if(imageName === arrayAdoptedPet[i].pic.split('/')[1] ){
+
+		                         //console.log(arrayPet[i].pic.split('/')[1])
+ console.log(imageName)
+
+                           
+
+								arrayAdoptedPet.splice(i, 1);
+								//arrayPetForAdoption.splice(i,1) ;
+								//console.log(arrayPetForAdoption)
+
+								$('main').empty('');
+								
+								displayAdopted();
+								// console.log( obj.name);
+
+							}
+						}	
+
+						   
+
+						   });
+
+                               });
+
+
 				  
 
 
 
-}) 
 
                             
                          

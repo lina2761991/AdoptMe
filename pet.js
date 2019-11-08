@@ -398,16 +398,20 @@ function displayAdopted(){
 								 var th72 =$('<th></th>');
 
 								 var tr8 =$('<tr></tr>');
-								 var th81 = $('<th></th>');
+								 var th81 =$('<th></th>');
 								 var th82 =$('<th></th>');
 
 
 
 								 var name =$('<input>');
+								 name.attr('placeholder','Your Pet Name...');
 
 								 var age =$('<input>');
+								 age.attr('type','number');
+								 age.attr('min','0');
+								 age.attr('placeholder','Your Pet Age...');
 
-
+//type="number" min="1" max="999"
 
 
 								  var type = $('<select>');
@@ -446,6 +450,12 @@ function displayAdopted(){
 								   size.attr('id','typeId1'); 
  
 								  var microchipId =$('<input>');
+								  microchipId.attr('placeholder','Your Pet Microchip Id...');
+								   microchipId.attr('type','number');
+								   microchipId.attr('min','000');
+								   //microchipId.attr('max','999');
+								   // microchipId.attr('size','4');
+
 
 								   var sterilized =$('<input>');
 								   sterilized.attr('type','radio');
@@ -471,6 +481,7 @@ function displayAdopted(){
 
 
 								 var pic =$('<input>');
+								 pic.attr('placeholder','Your Pet Picture...');
 
 								 th1.append('Name: ');
 								 th2.append(name );
@@ -484,7 +495,7 @@ function displayAdopted(){
 								  th51.append('Breed: ');
 								 th52.append(size );
 
-								 th61.append('MicrochipId: ');
+								 th61.append('Microchip Id: ');
 								 th62.append(microchipId );
 
 								 th71.append('Sterilized: ');
@@ -551,14 +562,14 @@ function displayAdopted(){
 				        var val = $(this).val();
 				       // console.log(val)
 				        if (val === "Dog") {
-				           size.html("<option value='German Sheperd'>German Sheperd</option><option value='Dashhund'>Dashhund</option>");
+				           size.html("<option value='German Sheperd'>German Sheperd</option><option value='Dashhund'>Dashhund</option><option value='Huskey'>Huskey</option><option value='Labrador'>Labrador</option>");
 
 				          // size.text('hey')
 				          console.log('hey')
 				        } 
 
 				         else if (val == "Cat") {
-				             size.html("<option value='test'>Siamois</option><option value='test2'>Persan</option>");
+				             size.html("<option value='Siamois'>Siamois</option><option value='Persan'>Persan</option><option value='Bengal'>Bengal</option>");
 
 				         }
 				    });

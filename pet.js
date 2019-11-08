@@ -1,3 +1,4 @@
+
 var arrayPet = [];
 var arrayAdoptedPet = [];
 
@@ -54,12 +55,26 @@ addPet(pet4);
 
 
 
+/* Set the width of the side navigation to 250px and the left margin of the page content to 250px */
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+/* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft = "0";
+}
+
+
 
 
 $(document).ready(function(){
+	var $main = $('main');
 
-
- var $body = $('body');
+					 
+ 
 
   // display all the pets for adoption
 
@@ -111,7 +126,7 @@ function displayAll(arr){
 
 
 
-displayAll(arrayPet);
+                    displayAll(arrayPet);
 
 
 
@@ -165,15 +180,15 @@ displayAll(arrayPet);
                      button2.appendTo(d6);
 					
 					
-					d1.appendTo($('body'));
+					d1.appendTo($('main'));
 
 
 
-
+//the click on span action
 
                    var obj ;
 
-                   $('span').on('click', function(e) {
+                   $('#big').on('click', function(e) {
                          	
 
                            e.preventDefault();
@@ -246,7 +261,7 @@ displayAll(arrayPet);
            
 
 
-
+// the modal buttons 
 						 $('#cancel').on('click', function(e) {
 						                         	
 						   $('.modal').toggleClass('is-visible');
@@ -267,13 +282,17 @@ displayAll(arrayPet);
 			
 						                      $('.modal').toggleClass('is-visible'); 
 
-						                      $('body').empty();
-
+						                      $('body').html('');
+						                      //how to display the navbar after clearing the body
 						                      displayAll(arrayPet); 	
 				
 												 });
 
 
+						   // navbar 
+
+
+						   /* Set the width of the sidebar to 250px and the left margin of the page content to 250px */
 
 
 

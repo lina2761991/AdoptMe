@@ -228,12 +228,6 @@ function displayAdopted(){
 						}	
                      });
 
-               
-
-      
-           
-
-
 
 
 // the modal buttons 
@@ -262,82 +256,6 @@ function displayAdopted(){
 												 });
 
 
-// 						   function displayForAdoption(){
-// 						   	//console.log('hey')
-
-// 	                 for(var i =0; i<arrayPetForAdoption.length; i++){
-// 	                 	if(arrayPetForAdoption[i].status === 'For Adoption'){
-
-//                      var s = $('<span></span>');
-//                      s.addClass('ClassSpan') ;
-//                      s.addClass('modal-toggle');
-// 					 s.attr('id', 'big');
-// 					 var s1 = $('<img>');
-// 					 var s2 = $('<div></div>');
-// 					 var s3 = $('<div></div>');
-// 					 var s4 = $('<div></div>');
-					
-// 					var button = $('<button></button>');
-// 					button.text(' Get to know me more ! ');
-//                     console.log(arrayPetForAdoption[i])
-//                      var pic = arrayPetForAdoption[i].pic;
-//                      s1.attr('src',pic);
-//                      s1.attr('class', 'pic');    
-// 					 s2.append("<br/>" +arrayPetForAdoption[i].pic);
-// 					 s2.attr('class', 'text');  
-					
-// 					button.appendTo(s4);
-
-// 				    s1.appendTo(s);
-// 					s2.appendTo(s);
-// 					s3.appendTo(s);	
-// 					s4.appendTo(s);
-// 					s.appendTo($('main'));
-
-
-//   }
-// }
-
-// }
-
-
-// display adopted pets 
-
-
-// $('#forAdoption').on('click', function() {
-// 						   	  $('main').empty('');
-// 						   	displayForAdoption();
-
-//                       	$('body').on('click','.ClassSpan', function(e) {
-
-//                            e.preventDefault();
-//                            $('.modal').toggleClass('is-visible');
-//                            $('p').empty();
-
-//                           var arrSrc=$(this)[0].innerText.split('');
-                     
-                          
-//                            var imageNameLetters = arrSrc.slice(arrSrc.length - 33, arrSrc.length-22 );// get the src of the image as an array of letters 
-// 						 var imageFullName = imageNameLetters.join('');// get the src of the image as a string
-//                         var imageNameArray = imageFullName.split('/');
-// 						var imageName = imageNameArray[imageNameArray.length-1];			
-
-// 						for(var i =0; i<arrayPetForAdoption.length; i++){
-// 							if(imageName === arrayPetForAdoption[i].pic.split('/')[1] ){
-// 								obj = arrayPetForAdoption[i];		
-// 								console.log(obj)
-// 								alert(obj.name)
-
-// 							}
-// 						}			
-	
-//                      });
-             	
-// 				});
-
-
-
-						
 
 
 						   //display homepage
@@ -480,32 +398,32 @@ function displayAdopted(){
 								  
 
 
-								 var pic =$('<input>');
-								 pic.attr('placeholder','Your Pet Picture...');
+	 var pic =$('<input>');
+	 pic.attr('placeholder','Your Pet Picture...');
 
-								 th1.append('Name: ');
-								 th2.append(name );
+	 th1.append('Name: ');
+	 th2.append(name );
 
-								 th31.append('Age: ');
-								 th32.append(age );
+	 th31.append('Age: ');
+	 th32.append(age );
 
-								 th41.append('Type: ');
-								 th42.append(type );
+	 th41.append('Type: ');
+	 th42.append(type );
 
-								  th51.append('Breed: ');
-								 th52.append(size );
+	  th51.append('Breed: ');
+	 th52.append(size );
 
-								 th61.append('Microchip Id: ');
-								 th62.append(microchipId );
+	 th61.append('Microchip Id: ');
+	 th62.append(microchipId );
 
-								 th71.append('Sterilized: ');
-								 th72.append(sterilized );
-								 th72.append(label);
-								 th72.append(sterilized2 );
-								  th72.append(label2);
+	 th71.append('Sterilized: ');
+	 th72.append(sterilized );
+	 th72.append(label);
+	 th72.append(sterilized2 );
+	  th72.append(label2);
 
-								 th81.append('Picture: ');
-								 th82.append(pic );
+	 th81.append('Picture: ');
+	 th82.append(pic );
 
 
 
@@ -665,15 +583,4 @@ function displayAdopted(){
 
                                });
 
-
-				  
-
-
-
-
-                            
-                         
-
-
 })
-

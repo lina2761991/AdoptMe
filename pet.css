@@ -1,4 +1,3 @@
-
 .pic{
   display:block;
   margin-left:auto;
@@ -7,12 +6,9 @@
   height: 280px;
 }
 .text{
-
    height: 10px;
    color: white; 
-
 }
-
 
 button{
   display: inline-block;
@@ -31,14 +27,15 @@ button{
   margin-top: 4px;
 }
 
-.button:hover {background-color: #3e8e41}
+.button:hover {
+  background-color: #3e8e41
+}
 
 .button:active {
   background-color: black;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
-
 
 /**
  * Box model adjustments
@@ -52,13 +49,11 @@ button{
   box-sizing: border-box;
 }
 
-
 html {
   font-size: 100%;
   overflow-y: scroll; 
   min-height: 100%;
 }
-
 
 body {
   font-family: "Helvetica Neue", Arial, sans-serif;
@@ -103,7 +98,6 @@ h6 {
  * Modals ($modals)
  */
 
-
 .modal {
     position: absolute;
     z-index: 10000; 
@@ -117,8 +111,6 @@ h6 {
 .modal.is-visible {
     visibility: visible;
 }
-
-
 
 .modal-overlay {
   position: fixed;
@@ -210,7 +202,6 @@ h6 {
   border: solid;
 }
 
-
 /* The side navigation menu */
 .sidenav {
   height: 100%; /* 100% Full-height */
@@ -252,7 +243,6 @@ h6 {
 /* Style page content - */
 #main {
   transition: margin-left .5s;
- /* padding: 20px;*/
 }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
@@ -265,15 +255,12 @@ h6 {
   padding-left: 150px;
 }
 
-
 #typeId{
   width : 162px;
-
 }
 
 #typeId1{
   width : 162px;
-
 }
 
 #logo{
@@ -286,14 +273,11 @@ h6 {
 /*when the mouse hover over the span change the shadow 
 */
 
-
 .ClassSpan{
    margin: 14px;
   display: inline-block;
-  padding-bottom: 25px;
-   
+  padding-bottom: 25px; 
 }
-
 
 .ClassSpan:hover{
   box-shadow: inset 0 0 1em #6B8E23, 0 0 2em #6B8E23;
@@ -303,7 +287,6 @@ h6 {
   margin:auto;
 }
  
-
 #addNewPet {
     margin-left: 600px;
 }
@@ -311,7 +294,6 @@ h6 {
 #DeleteButton{
   margin-left: 600px;
 }
-
 
 table{
   display:block;

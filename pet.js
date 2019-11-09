@@ -110,6 +110,8 @@ $(document).ready(function(){
 
 displayAll(arrayPetForAdoption);
 
+//the skeleton of the pop up
+
 var d1 = $('<div></div>'); 
 d1.addClass('modal');
 
@@ -209,17 +211,16 @@ d1.appendTo($('main'));
 
 	$('.modal').toggleClass('is-visible');
 	});
+
 	// adopt me button 
 	$('#adopt').on('click', function() {
-
 	obj.status = "adopted";
 	arrayAdoptedPet.push(obj);
-
 	for(var i =0; i<arrayPetForAdoption.length; i++){
 	if(arrayPetForAdoption[i] === obj){
 	arrayPetForAdoption.splice(i, 1); 
 	}
-}
+ }
 
 	$('main').empty('');
 	displayAll(arrayPetForAdoption);
@@ -241,7 +242,7 @@ d1.appendTo($('main'));
 	});
 
 
-	// display for adoption
+	// add for adoption
 
 
 	$('#Add').on('click',function(){
